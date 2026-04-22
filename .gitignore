@@ -1,0 +1,83 @@
+# Data — NEVER commit raw proprietary data
+# Bloomberg and exchange-licensed data are not redistributable.
+# Keep all real data files in data/ (ignored). Only data/README.md is tracked.
+data/*.csv
+data/*.xlsx
+data/*.xls
+data/*.parquet
+data/*.feather
+!data/README.md
+
+# Results — regenerated locally; no need to commit by default.
+# Exception: the six paper figures are checked in so they render in the README.
+results/figures/*.png
+results/figures/*.pdf
+results/tables/*.csv
+!results/figures/1_OLS_Effect_Sizes.png
+!results/figures/2_Cross_Correlation_All.png
+!results/figures/3_Granger_Causality_All.png
+!results/figures/4_Impulse_Response_All.png
+!results/figures/5_Rolling_R2_All.png
+!results/figures/6_Feature_Importance.png
+!results/figures/.gitkeep
+!results/tables/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+.python-version
+
+# IDE / editors
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Testing / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Logs
+*.log
+logs/
